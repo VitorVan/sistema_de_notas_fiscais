@@ -16,9 +16,6 @@ origins = [
     "http://localhost:5173",
 ]
 
-model = DonutModel.from_pretrained("./data/models/20231013_121625")
-
-
 @app.post("/receipt")
 def getReceiptHandler(file: UploadFile):
   print(file.filename)
@@ -33,7 +30,7 @@ def getReceiptHandler(file: UploadFile):
     shutil.copyfileobj(file.file, buffer)
   
   start_time = time.time()
-  receiptData = getData(file_path, model)
+  receiptData = getData(file_path)
   end_time = time.time()
   elapsed_time = end_time - start_time
   elapsed_time = round(elapsed_time)

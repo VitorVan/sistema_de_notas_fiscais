@@ -4,7 +4,7 @@ import torch
 
 def getData(file_path):
   print("Using main getData")
-  model = DonutModel.from_pretrained("./data/models/20231204_122304_latest")
+  model = DonutModel.from_pretrained("./data/models/20231013_121625")
   #model = DonutModel.from_pretrained("./result/train_notas/20231013_125739")
   if torch.cuda.is_available():
     model.half()
