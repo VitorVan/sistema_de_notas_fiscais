@@ -38,13 +38,13 @@ function Header({ company, address, cnpj }) {
     <div className="flex justify-between">
       <div>
         <p>
-          <strong>Empresa:</strong> {company ? company : "-"}
+          <strong>Empresa:</strong> {company ? JSON.stringify(company) : "-"}
         </p>
         <p>
-          <strong>Endereço:</strong> {address ? address : "-"}
+          <strong>Endereço:</strong> {address ? JSON.stringify(address) : "-"}
         </p>
         <p>
-          <strong>CNPJ:</strong> {cnpj ? cnpj : "-"}
+          <strong>CNPJ:</strong> {cnpj ? JSON.stringify(cnpj) : "-"}
         </p>
       </div>
     </div>
